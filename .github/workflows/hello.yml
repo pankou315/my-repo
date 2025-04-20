@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-laster
     steps:
       - run: echo "Hello,world"
-      - uses: actions/checkout@v4000
+      - uses: actions/checkout@v4
       
