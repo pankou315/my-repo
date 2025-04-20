@@ -9,6 +9,6 @@ jobs:
      BRANCH: main
     steps:
       - run: echo "${{ runner.os }}"
-      - uses: actions/checkout`v4
+      - - uses: actions/checkout@v4
         with:
           ref: ${{env.BRANCH}}
