@@ -1,4 +1,4 @@
-name: steptest
+name: GITHUB_OUTPUT
 on: push
 jobs:
  share:
