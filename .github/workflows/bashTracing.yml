@@ -6,10 +6,11 @@ jobs:
     env:
       USERNAME: ${{ github.actor }}
     steps:
+      - uses: actions/checkout@v4
       - run: |
           echo "::warning::This is a warning"
           echo "## Example of a masked variable"
-          echo "- HOME:">> " $HOME"
+          echo "HOME: $HOME"
           echo "::add-mask::${USERNAME}"
           echo "USERNAME: $USERNAME"
           echo "USER: $USER"
