@@ -3,9 +3,13 @@ on: push
 jobs:
   log:
     runs-on: ubuntu-latest
+    env:
+      USERNAME: ${{ github.actor }}
     steps:
+    
       - run: |
           echo "::group::Show environment variables"
+          echo "::add-mask::${USERNAME}"
           echo "USERNAME: $USERNAME"
           echo "USER: $USER"
           echo "HOME: $HOME"
