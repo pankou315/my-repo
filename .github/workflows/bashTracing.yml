@@ -4,7 +4,14 @@ jobs:
   log:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ env.USERNAME }}"
+      - run: |
+          echo "::group::Show environment variables"
+          echo "USERNAME: $USERNAME"
+          echo "USER: $USER"
+          echo "HOME: $HOME"
+          echo "PWD: $PWD"
+          echo "::endgroup::"
+
       - run: |
           set -x
           date
