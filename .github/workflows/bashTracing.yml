@@ -1,0 +1,12 @@
+name: Bash tracing
+on: push
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ env.USERNAME }}"
+      - run: |
+        set -x
+        date
+        hostname
+        
