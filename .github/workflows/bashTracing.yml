@@ -6,7 +6,7 @@ jobs:
     steps:
       - run: echo "${{ env.USERNAME }}"
       - run: |
-        set -x
-        date
-        hostname
+          set -x
+          date
+          hostname
         
