@@ -6,13 +6,13 @@ jobs:
     env:
       USERNAME: ${{ github.actor }}
     steps:
-    
       - run: |
-          echo "::group::Show environment variables"
+          echo "::warning::This is a warning"
+          echo "## Example of a masked variable"
+          echo "- HOME:">> " $HOME"
           echo "::add-mask::${USERNAME}"
           echo "USERNAME: $USERNAME"
           echo "USER: $USER"
-          echo "HOME: $HOME"
           echo "PWD: $PWD"
           echo "::endgroup::"
 
