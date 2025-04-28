@@ -6,12 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: generate
-        run: echo "{result=hello}">>"${GITHUB_OUTPUT}"
+        run: echo "result=hello" >> "${GITHUB_OUTPUT}"
     outputs:
       result: ${{ steps.generate.outputs.result }}
 
   after:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     needs: [before]
     steps:
       - env:
