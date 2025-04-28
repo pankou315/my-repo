@@ -1,6 +1,6 @@
 name: Environments
 on:
-  wokflow_dispatch:
+  workflow_dispatch:
     inputs:
       environment:
         type: environment
