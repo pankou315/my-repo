@@ -4,12 +4,15 @@ jobs:
   first:
     runs-on: ubuntu-latest
     steps:
-      -run: sleep 10 && echo "First job"
+      - name: First job
+        run: sleep 10 && echo "First job"
   second:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      -run: sleep 10 && echo "Second job"
+      - name: Second job
+        run: sleep 10 && echo "Second job"
   third:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      -run: sleep 10 && echo "Third job"
+      - name: Third job
+        run: sleep 10 && echo "Third job"
