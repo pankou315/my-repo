@@ -12,7 +12,7 @@ jobs:
 
   after:
     run-on: ubuntu-latest
-    needs:[before]
+    needs: [before]
     steps:
       - env:
         RESULT: ${{ needs.before.outputs.result}}
