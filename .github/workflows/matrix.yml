@@ -1,0 +1,14 @@
+name: Matrix
+on: push
+jobs:
+  print:
+    strategy:
+      matrix:
+          os: [ubuntu-latest, windows-latest,macos-latest]
+      runs-on: ${{ matrix.os }}
+    env:
+      USERNAME: ${{ vars.USERNAME }}
+    steps:
+      - run: echo "${{ matrix.os }}"
+        shell: bash
+        
