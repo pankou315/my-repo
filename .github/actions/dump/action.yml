@@ -1,0 +1,26 @@
+name: Dump
+description: |
+  Dump the database
+inputs:
+  enable-context:
+    default: "true"
+    required: false
+    description: コンテキストをログ出力します。
+outputs:
+  dumped-date:
+    value: ${{ steps.current-date.outputs.date }}
+    description: ダンプした日付
+runs:
+  using: composite
+  steps:
+    - run: printenv | sort
+      shell: bash
+    - run: echo "${CONTEXT}"
+      if: ${{ inputs.enable-context == 'true' }}
+      env:
+        CONTEXT: ${{ toJSON(github) }}
+      shell: bash
+    - id: current
+      run: echo "date=$(date)" >> $GITHUB_OUTPUT
+      shell: bash
+      
